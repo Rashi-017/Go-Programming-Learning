@@ -58,7 +58,7 @@ func PerformPostRequest() {
 	}
 	jsonstring := string(jsondata)
 	jsonReader := strings.NewReader(jsonstring)
-	res, err := http.Post("https://jsonplaceholder.typicode.com/post", "application/json", jsonReader)
+	res, err := http.Post("https://jsonplaceholder.typicode.com/posts", "application/json", jsonReader)
 	if err != nil {
 		fmt.Println("error ", err)
 	}
