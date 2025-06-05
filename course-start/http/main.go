@@ -15,7 +15,8 @@ func main() {
 	}
 	bs := make([]byte, 99999)
 	res.Body.Read(bs)
-	//fmt.Println(string(bs))
+	//clear
+	// fmt.Println(string(bs))
 	lw := logwriter{}
 	lw.Write(bs)
 }

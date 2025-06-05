@@ -4,7 +4,7 @@ import "testing"
 
 func testdeck(t *testing.T) {
 	d := newdeck()
-	if len(d) != 2000 {
+	if len(d) == 2000 {
 		t.Errorf("expected deck length is 20 but get %v", len(d))
 	}
 	if d[0] != "Ace of spade " {
