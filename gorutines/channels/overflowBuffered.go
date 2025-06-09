@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func OverflowBuffered() {
 
@@ -10,7 +13,7 @@ func OverflowBuffered() {
 
 	ch1 := make(chan int, 2)
 
-	ch <- "string3"
+	// ch <- "string3"
 	go func() {
 		for i := 0; i < 2; i++ {
 			ch1 <- i
@@ -29,6 +32,7 @@ func OverflowBuffered() {
 	case ch <- "string3":
 		fmt.Println("string3")
 	default:
+		time.Sleep(time.Second * 2)
 		fmt.Println(" channel is full ")
 
 	}

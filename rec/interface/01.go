@@ -4,9 +4,9 @@ import (
 	"fmt"
 )
 
-//	type voice interface {
-//		say() string
-//	}
+	type voice interface {
+		say() string
+	}
 type dog struct{}
 
 func (c dog) say() string {

@@ -35,5 +35,5 @@ func main() {
 	wg.Wait()
 	fmt.Println("total is ", mypost.view)
 	mutex()
-	mutex3()
+	//mutex3()
 }

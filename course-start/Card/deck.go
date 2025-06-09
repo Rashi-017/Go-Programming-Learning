@@ -45,6 +45,7 @@ func (d deck) SaveToFile(filename string) error {
 }
 
 func readfile(filename string) deck {
+
 	bs, err := os.ReadFile(filename)
 	if err != nil {
 		fmt.Println("error", err)

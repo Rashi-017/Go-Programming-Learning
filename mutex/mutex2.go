@@ -34,14 +34,14 @@ func mutex() {
 	var wg sync.WaitGroup
 	amt := Amount{balance: 20000}
 
-	for i := 0; i < 3; i++ {
+	for i := 0; i < 1; i++ {
 		wg.Add(1)
-		go amt.Desposit(0, &wg)
+		go amt.Desposit(100, &wg)
 	}
 
-	for i := 0; i <= 2; i++ {
+	for i := 0; i < 1; i++ {
 		wg.Add(1)
-		go amt.withdrawal(20000, &wg)
+		go amt.withdrawal(800, &wg)
 	}
 
 	wg.Wait()
