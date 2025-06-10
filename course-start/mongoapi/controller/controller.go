@@ -15,7 +15,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-const connectionString = "mongodb+srv://rashisharma:CaWvYi0kg7lNjc3D@cluster0.ebgvgj3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const connectionString = "mongodb+srv://rashisharma:<password>@cluster0.ebgvgj3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const dbname = "Netflixdb"
 const colName = "watchlist"
 
