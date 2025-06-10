@@ -1,15 +1,15 @@
-package model
+package main
 
 import (
-	"go.mongodb.org/mongo-driver/bson/primitive"
+	"fmt"
+	"log"
+	"mongo/router"
+	"net/http"
 )
 
-type Netflix struct {
-	Id      primitive.ObjectID `json:"_id,omitempty",bson:"_id,omitempty"`
-	Movie   string             `json:"movie,omitempty",bson:"_id,omitempty"`
-	Watched bool               `json:"watched,omitempty" bson:"_id,omitempty"`
-}
-
 func main() {
-
+	r := router.Router()
+	fmt.Println("server getting strated....")
+	log.Fatal(http.ListenAndServe(":3000", r))
+	fmt.Println("server started listening at port 3000")
 }
